@@ -1,6 +1,9 @@
-$(document).ready(function(){
-    $("#addButton").click(function() {
-        $("#myModal").modal("show");
+$(document).ready(function () {
+    $("#addExerciseSubmit").click(function () {
+        $("#nameTypeModal").modal("hide");
+        $("#exerciseStatsModal").modal("show");
     });
 });
+
+
 
