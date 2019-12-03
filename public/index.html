@@ -40,13 +40,13 @@
                         <div class="modal-body">
                             <form>
                                 <div class="form-group">
-                                    <label for="exampleFormControlInput1"></label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                    <label for="exerciseName">Exercise Name</label>
+                                    <input type="email" class="form-control" id="exerciseName"
                                         placeholder="Name of exercise...">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleFormControlSelect1"></label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
+                                    <label for="exerciseType">Exercise Type</label>
+                                    <select class="form-control" id="exerciseType">
                                         <option>Select type...</option>
                                         <option>Strength</option>
                                         <option>Cardio</option>
@@ -66,7 +66,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Modal Title</h5>
+                            <h5 id="modalTitle2" class="modal-title">Modal Title</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -75,8 +75,8 @@
                             <p>Select how many Sets, Reps and how much weight.</p>
                             <form>
                                 <div class="form-group">
-                                    <label for="exampleFormControlSelect1"></label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
+                                    <label for="exerciseSets"></label>
+                                    <select class="form-control" id="exerciseSets">
                                         <option>Select sets...</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -91,8 +91,8 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleFormControlSelect1"></label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
+                                    <label for="exerciseReps"></label>
+                                    <select class="form-control" id="exerciseReps">
                                         <option>Select reps...</option>
                                         <option>2</option>
                                         <option>4</option>
@@ -107,8 +107,8 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleFormControlSelect1"></label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
+                                    <label for="exerciseWeight"></label>
+                                    <select class="form-control" id="exerciseWeight">
                                         <option>Select weight...</option>
                                         <option>5</option>
                                         <option>10</option>
@@ -127,7 +127,7 @@
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button id="addStatsSubmit" type="button" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
                 </div>
