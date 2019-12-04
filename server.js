@@ -22,10 +22,27 @@ var connection = mysql.createConnection({
   database: "quotes_db"
 });
 
-connection.connect(function(err) {
+connection.connect(function (err) {
   if (err) {
     console.error("error connecting: " + err.stack);
     return;
   }
   console.log("connected as id " + connection.threadId);
 });
+
+app.get("/", function (req, res) {
+  connection.query("SELECT * FROM input;", (err, data) => {
+    if (err) throw error;
+    // this will render the input form from the index.handlebars 
+    res.render("index", { input: data });
+  });
+});
+
+app.get("/:id", function (req, res) {
+  connection.query("SELECT * FROM input where id = ?", [req.params.id], (err, data) => {
+    if (err) throw error;
+    // Need to change out the placeholder (#) with the handlebars file path we use
+    res.render("#", data[0]);
+  });
+});
+
