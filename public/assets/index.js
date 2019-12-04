@@ -1,6 +1,6 @@
 var exerciseData = {};
-$(document).ready(function () {
 
+$(document).ready(function () {
 
     $("#addExerciseSubmit").click(function () {
         $("#nameTypeModal").modal("hide");
@@ -13,9 +13,14 @@ $(document).ready(function () {
         exerciseData.sets = $("#exerciseSets").val();
         exerciseData.reps = $("#exerciseReps").val();
         exerciseData.weight = $("#exerciseWeight").val();
-        console.log(exerciseData);
+        $("#exerciseStatsModal").modal("hide");
+        $("#exerciseNameCollapse").html(exerciseData.name);
+        // console.log(exerciseData);
+        
+        
     });
 });
+
 
 
 
