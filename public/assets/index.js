@@ -1,6 +1,9 @@
 var exerciseData = {};
 
 $(document).ready(function () {
+    $("#exerciseCard").hide();
+     
+    
 
     $("#addExerciseSubmit").click(function () {
         $("#nameTypeModal").modal("hide");
@@ -14,11 +17,12 @@ $(document).ready(function () {
         exerciseData.reps = $("#exerciseReps").val();
         exerciseData.weight = $("#exerciseWeight").val();
         $("#exerciseStatsModal").modal("hide");
-        $("#exerciseNameCollapse").html(exerciseData.name);
-        // console.log(exerciseData);
-        
-        
+        $("#exerciseNameCard").html(exerciseData.name);
+        $("#exerciseCard").show();
+
+        // console.log(exerciseData);    
     });
+    $
 });
 
 
