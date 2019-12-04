@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const db = require("./views/layouts/login");
+const db = require("./models");
 
 router.get("/login", (req, res) => {
   res.render("/login");
