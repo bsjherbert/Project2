@@ -2,8 +2,6 @@ var exerciseData = {};
 
 $(document).ready(function () {
     $("#exerciseCard").hide();
-     
-    
 
     $("#addExerciseSubmit").click(function () {
         $("#nameTypeModal").modal("hide");
@@ -19,6 +17,7 @@ $(document).ready(function () {
         $("#exerciseStatsModal").modal("hide");
         $("#exerciseNameCard").html(exerciseData.name);
         $("#exerciseCard").show();
+        console.log(exerciseData)
 
         // console.log(exerciseData);    
     });
