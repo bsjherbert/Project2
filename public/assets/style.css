@@ -79,6 +79,10 @@ h1 {
   color: white;
 }
 
+.btn {
+  background-color: black;
+}
+
 /* Secondary Container */
 
 .list-container .card {

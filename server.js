@@ -15,11 +15,10 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Serve index.handlebars to the root route.
-app.get("/", function (req, res) {
+app.get("/", function(req, res) {
   // read all workouts from database and assign them to a variable "workouts"
   //var workouts = db.findall(logic to find all workouts in mysql db)
   //res.render ("index", workouts)
-
   //temporary hard coded data
   res.render("index", {
     workouts: {
@@ -38,10 +37,9 @@ app.get("/", function (req, res) {
         sets: 5,
         reps: 10,
         weight: 50
-      },
+      }
     }
   });
-
 });
 
 // var connection = mysql.createConnection({
@@ -61,7 +59,7 @@ app.get("/", function (req, res) {
 // });
 
 // Start our server so that it can begin listening to client requests.
-app.listen(PORT, function () {
+app.listen(PORT, function() {
   // Log (server-side) when our server has started
   console.log("Server listening on: http://localhost:" + PORT);
 });
