@@ -1,4 +1,9 @@
-/* .background {
-    background-image: url(unnamed-1.jpg);
-   
-} */
+.background {
+  background-image: url(unnamed-1.jpg);
+}
+
+#particles-js {
+  height: 100vh;
+  width: 100vw;
+  background: url("https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}

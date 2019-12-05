@@ -1,7 +1,7 @@
 var exerciseData = {};
 
 $(document).ready(function () {
-    $("#exerciseCard").hide();
+    // $("#exerciseCard").hide();
 
     $("#addExerciseSubmit").click(function () {
         $("#nameTypeModal").modal("hide");
@@ -10,6 +10,7 @@ $(document).ready(function () {
         exerciseData.type = $("#exerciseType").val();
         $("#modalTitle2").html(exerciseData.name);
     });
+
     $("#addStatsSubmit").click(function () {
         exerciseData.sets = $("#exerciseSets").val();
         exerciseData.reps = $("#exerciseReps").val();
@@ -17,11 +18,18 @@ $(document).ready(function () {
         $("#exerciseStatsModal").modal("hide");
         $("#exerciseNameCard").html(exerciseData.name);
         $("#exerciseCard").show();
-        console.log(exerciseData)
-
-        // console.log(exerciseData);    
+        // console.log(exerciseData); 
+        //ajax post request 
+        // $.ajax({
+        //     type: "POST",
+        //     url: "/",//route to post new exercise
+        //     data: exerciseData,
+        //     success: function(data) {
+        //         console.log("Successfully posted: ")
+        //         console.log(data)
+        //     }
+        // });
     });
-    $
 });
 
 
