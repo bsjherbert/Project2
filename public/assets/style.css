@@ -66,6 +66,10 @@ h1 {
   height: 190px;
 }
 
+#h5Instruction {
+  color: black;
+}
+
 /* Button */
 
 #addButton {
