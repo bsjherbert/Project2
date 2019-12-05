@@ -1,7 +1,6 @@
 var exphbs = require("express-handlebars");
 var express = require("express");
-var mysql = require("mysql");
-
+const db = require("./models")
 var app = express();
 
 var PORT = process.env.PORT || 8080;
@@ -14,52 +13,49 @@ app.use(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// Serve index.handlebars to the root route.
-app.get("/", function(req, res) {
-  // read all workouts from database and assign them to a variable "workouts"
-  //var workouts = db.findall(logic to find all workouts in mysql db)
-  //res.render ("index", workouts)
-  //temporary hard coded data
-  res.render("index", {
-    workouts: {
-      workout1: {
-        id: 1,
-        name: "Bench Press",
-        type: "Strength",
-        sets: 5,
-        reps: 10,
-        weight: 50
-      },
-      workout2: {
-        id: 2,
-        name: "Squats",
-        type: "Strength",
-        sets: 5,
-        reps: 10,
-        weight: 50
-      }
-    }
+var auth = require("./controllers/authController")
+var exercise = require("./controllers/excerciseController")
+app.use(auth, exercise)
+
+
+  
+
+  // });
+  // connection.query("SELECT * FROM input;", (err, data) => {
+  //   if (err) throw error;
+    // this will render the input form from the index.handlebars 
+// });
+
+// app.get("/:id", function (req, res) {
+//   connection.query("SELECT * FROM input where id = ?", [req.params.id], (err, data) => {
+//     if (err) throw error;
+    
+//     res.render("index", data[0]);
+//   });
+// });
+
+// app.get("/:id", function (req, res) {
+//   connection.query("SELECT * FROM input where id = ?", [req.params.id], (err, data) => {
+//     if (err) throw error
+
+//     console.log(data);
+//     res.render("index", data[0]);
+//   });
+// });
+
+// app.post("/api/input", function (req, res) {
+//   connection.query("INSERT INTO input (name, type, sets, weights, comments) VALUES (?, ?)", [req.body.name, req.body.type, req.body.sets, req.body.weights, req.body.comments], (err, data) => {
+//     if (err) throw err
+//     res.json({ id: result.insertId });
+
+//   });
+// });
+
+
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    // Log (server-side) when our server has started
+    console.log("Server listening on: http://localhost:" + PORT);
   });
-});
 
-// var connection = mysql.createConnection({
-//   host: "localhost",
-//   port: 3306,
-//   user: "root",
-//   password: "Waynesworld13!",
-//   database: "quotes_db"
-// });
-
-// connection.connect(function(err) {
-//   if (err) {
-//     console.error("error connecting: " + err.stack);
-//     return;
-//   }
-//   console.log("connected as id " + connection.threadId);
-// });
-
-// Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
-  // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + PORT);
 });
