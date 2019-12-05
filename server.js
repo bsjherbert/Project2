@@ -13,21 +13,12 @@ app.use(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+var auth = require("./controllers/authController")
+var exercise = require("./controllers/excerciseController")
+app.use(auth, exercise)
 
-app.get("/", function (req, res) {
+
   
-      db.Exercise.findAll().then(foundExercises => {
-        console.log(foundExercises);
-        res.render("index", { exercises: foundExercises });
-      });
-    });
-
-    app.post("/api/exercise", function(req, res) {
-      db.Exercise.create(req.body).then(function(){
-        res.redirect("/");
-      });
-    });
-  // })
 
   // });
   // connection.query("SELECT * FROM input;", (err, data) => {

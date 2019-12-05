@@ -1,10 +1,19 @@
 const express = require("express");
 const router = express.Router();
 
-const db = require("./models");
+const db = require("../models");
 
 router.get("/login", (req, res) => {
+  console.log("hit this route <=============")
   res.render("login");
+});
+
+router.post("/api/users", function(req, res) {
+
+  console.log("yo yo yo")
+  db.User.create(req.body).then(function(){
+    res.redirect("/login");
+  });
 });
 
 router.post("/login", (req, res) => {
