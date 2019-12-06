@@ -37,9 +37,15 @@ body {
 
 #logout {
   position: relative;
+<<<<<<< HEAD
   bottom: 7vw;
   left: 750px;
   
+=======
+  
+  bottom: 7vw;
+  left: 750px;
+>>>>>>> d8abc898cf3b1df6496ee93154b8e0e314c25bdb
 }
 
 h1 {
