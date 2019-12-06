@@ -99,6 +99,10 @@ h1 {
   background-color:  rgb(26, 22, 22) !important;
 }
 
+.btn2 {
+  background-color:  rgb(26, 22, 22) !important;
+}
+
 /* Secondary Container */
 
 .list-container .card {
@@ -153,4 +157,13 @@ h1 {
   background-color: rgb(26, 22, 22);
 }
 
+/* Modal CSS */
+
+#nameTypeModal {
+  color: rgb(26, 22, 22);
+}
+
+#exerciseStatsModal {
+  color: rgb(26, 22, 22);
+}
 
