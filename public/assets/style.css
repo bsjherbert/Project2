@@ -37,8 +37,9 @@ body {
 
 #logout {
   position: relative;
-  bottom: 50px;
-  left: 1120px;
+  
+  bottom: 7vw;
+  left: 750px;
 }
 
 h1 {
