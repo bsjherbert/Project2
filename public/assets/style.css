@@ -131,3 +131,12 @@ h1 {
 .secondaryContainer {
   margin-left: 0;
 }
+
+#exerciseNameCard {
+  color: white;
+}
+
+#cardBody {
+  text-align: left;
+  color: black;
+}
