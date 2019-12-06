@@ -68,7 +68,7 @@ h1 {
 
 .card-body {
   text-align: center;
-  background-color: white;
+  background-color:  rgb(0, 0, 0);
 }
 
 .d-flex {
@@ -80,10 +80,13 @@ h1 {
   height: 190px;
 }
 
+#h5Instruction {
+  color: rgb(26, 22, 22);
+}
+
 /* Button */
 
 #addButton {
-  background-color: black;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -94,7 +97,16 @@ h1 {
 }
 
 .btn {
-  background-color: black;
+  background-color: rgb(26, 22, 22);
+  border-radius: 22px;
+}
+
+.btn1 {
+  background-color:  rgb(26, 22, 22) !important;
+}
+
+.btn2 {
+  background-color:  rgb(26, 22, 22) !important;
 }
 
 /* Secondary Container */
@@ -133,3 +145,31 @@ h1 {
 .secondaryContainer {
   margin-left: 0;
 }
+
+#exerciseNameCard {
+  color:  rgb(26, 22, 22);
+}
+
+#cardBody {
+  text-align: left;
+ 
+}
+
+#exerciseCard {
+  background-color: rgb(26, 22, 22);
+}
+
+#heading3 {
+  background-color: rgb(26, 22, 22);
+}
+
+/* Modal CSS */
+
+#nameTypeModal {
+  color: rgb(26, 22, 22);
+}
+
+#exerciseStatsModal {
+  color: rgb(26, 22, 22);
+}
+

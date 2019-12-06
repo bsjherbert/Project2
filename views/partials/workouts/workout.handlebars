@@ -1,21 +1,20 @@
 <div id="accordion">
     <div id="exerciseCard" class="card">
-        <button class="btn p-0 text-left" data-toggle="collapse" data-target="#collapse{{id}}" aria-expanded="true"
+        <button class="btn2 p-0 text-left" data-toggle="collapse" data-target="#collapse{{id}}" aria-expanded="true"
             aria-controls="collapse{{id}}">
             <div class="card-header border-bottom-0" id="heading{{id}}">
-                <h5 id="exerciseNameCard" class="mb-0">
+                <h5 id="exerciseNameCard" class="mb-0 text-warning">
                     {{name}}
                 </h5>
             </div>
         </button>
         <div id="collapse{{id}}" class="collapse hide" aria-labelledby="heading{{id}}" data-parent="#accordion">
-            <div class="card-body">
+            <div id="cardBody" class="card-body text-warning">
                 <p>Name: {{name}}</p>
                 <p>Type: {{type}}</p>
                 <p>Sets: {{sets}}</p>
                 <p>Reps: {{reps}}</p>
                 <p>Weight: {{weights}}</p>
-
             </div>
         </div>
     </div>

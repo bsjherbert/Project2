@@ -2,6 +2,10 @@
 
 <div id="main-container" class="container">
 
+<<<<<<< HEAD
+    <section class="main-section">
+        <h1 class="text-warning">Select Exercise</h1>
+=======
      <button id="logout">
         <h2><a href="/logout">Logout</a></h2>
         </button>
@@ -9,23 +13,32 @@
     <section class="main-section">
         <h1>Select Exercise</h1>
         
+>>>>>>> 072edc8d0a160d179fd0299c466b8197f57f09b2
         <div>
-            "Click the <i class="fa fa-plus"></i> button to get started."
+            <h5 id="h5Instruction"> "Click the <i class=" fa fa-plus"></i> button to get started."
+            </h5>
+
             <br>
             <br>
         </div>
-        <button type="button" class="btn" data-toggle="modal" data-target="#nameTypeModal">
+        <button type="button" class="btn bg-warning" data-toggle="modal" data-target="#nameTypeModal">
             <i class="fa fa-plus plusButton"></i>
         </button>
+<<<<<<< HEAD
+=======
 
        
 
 
+>>>>>>> 072edc8d0a160d179fd0299c466b8197f57f09b2
     </section>
+
     {{#each workouts}}
     {{> workouts/workout}}
     {{/each}}
+
 </div>
+
 <!-- Modal 1 -->
 <div class="modal fade" id="nameTypeModal" tabindex="-1" role="dialog" aria-labelledby="nameTypeLabel"
     aria-hidden="true">
@@ -49,6 +62,7 @@
                             <option>Select type...</option>
                             <option>Strength</option>
                             <option>Cardio</option>
+                            <option>Circuit</option>
                         </select>
                     </div>
                 </form>
@@ -60,6 +74,7 @@
         </div>
     </div>
 </div>
+
 <!--Modal 2-->
 <div id="exerciseStatsModal" class="statsModal modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
@@ -134,6 +149,16 @@
                             <option>40</option>
                             <option>45</option>
                             <option>50</option>
+                            <option>55</option>
+                            <option>60</option>
+                            <option>65</option>
+                            <option>70</option>
+                            <option>75</option>
+                            <option>80</option>
+                            <option>85</option>
+                            <option>90</option>
+                            <option>95</option>
+                            <option>100</option>
                         </select>
                     </div>
                 </form>
