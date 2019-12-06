@@ -11,7 +11,7 @@ router.get("/login", (req, res) => {
 router.post("/api/users", function(req, res) {
   console.log("yo yo yo");
   db.User.create(req.body).then(function() {
-    res.redirect("/login");
+    res.redirect("/");
   });
 });
 
@@ -31,7 +31,7 @@ router.post("/login", (req, res) => {
           error: "Invalid email or password, please try again."
         });
       }
-
+      console.log(req.session+"<============")
       req.session.userId = user.id;
       res.redirect("/"); // that does not matter, only for 8080/....//
     })

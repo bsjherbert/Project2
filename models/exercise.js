@@ -8,6 +8,10 @@ module.exports = function(sequalize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
+        reps:{
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
         sets: {
             type: DataTypes.INTEGER,
             allowNull: false
@@ -18,6 +22,11 @@ module.exports = function(sequalize, DataTypes) {
         },
         comments: DataTypes.STRING
     });
+
+    Exercise.associate = function (models) {
+        Exercise.belongsTo(models.User);
+    };
+
 
     return Exercise;
 
