@@ -35,6 +35,12 @@ body {
   clear: both;
 }
 
+#logout {
+  position: relative;
+  bottom: 50px;
+  left: 1120px;
+}
+
 h1 {
   font-family: monospace;
   font-weight: 700;
